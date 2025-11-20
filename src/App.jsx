@@ -59,7 +59,7 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <Router basename="/mywebsite">
+    <Router>
       <SmoothScroll>
         <ScrollToTop />
         <div className="bg-[#050505] text-white overflow-x-hidden min-h-screen flex flex-col">
