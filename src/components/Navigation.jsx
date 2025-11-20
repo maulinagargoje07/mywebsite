@@ -37,7 +37,7 @@ export default function Navigation() {
         <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled || isOpen ? 'bg-black' : 'bg-transparent py-6'}`}>
             <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <Link to="/" className="flex items-center gap-2 group z-50 relative">
-                    <img src="/mywebsite/logo.jpg" alt="Mauli Nagargoje" className="h-10 w-auto rounded-full border-2 border-transparent group-hover:border-red-500 transition-all" />
+                    <img src="/logo.jpg" alt="Mauli Nagargoje" className="h-10 w-auto rounded-full border-2 border-transparent group-hover:border-red-500 transition-all" />
                     <span className="text-xl font-bold text-white tracking-wider group-hover:text-red-500 transition-colors">MAULI.IN</span>
                 </Link>
 
