@@ -5,6 +5,15 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    --glass-blur: blur(20px);
+    --glass-text: rgba(255, 255, 255, 0.9);
+    --glass-text-muted: rgba(255, 255, 255, 0.6);
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -20,9 +29,57 @@
     font-family: 'Space Grotesk', sans-serif;
     overflow-x: hidden;
     background-color: #050505;
+    background-image:
+      radial-gradient(circle at 15% 50%, rgba(255, 0, 0, 0.08), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(255, 60, 0, 0.08), transparent 25%);
     color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-card {
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.01) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .text-glass {
+    background: linear-gradient(135deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @media (max-width: 768px) {
+    .glass-panel {
+      background: rgba(10, 10, 10, 0.7);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+    }
+
+    .glass-card {
+      background: linear-gradient(135deg,
+          rgba(20, 20, 20, 0.8) 0%,
+          rgba(20, 20, 20, 0.6) 100%);
+      backdrop-filter: blur(25px);
+      -webkit-backdrop-filter: blur(25px);
+    }
   }
 }
 
@@ -49,6 +106,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }

@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function About() {
     return (
-        <section className="relative min-h-screen bg-[#050505] py-20 px-4 flex items-center justify-center pt-32">
+        <section className="relative min-h-screen py-20 px-4 flex items-center justify-center pt-32">
             <div className="max-w-6xl mx-auto w-full animate-fadeIn">
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-16 text-center">
                     About <span className="text-red-500">Me</span>
                 </h2>
 
                 <div className="grid md:grid-cols-2 gap-12 mb-16">
-                    <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-red-500/50 transition-all duration-300">
+                    <div className="glass-card rounded-3xl p-8 hover:border-red-500/50 transition-all duration-300">
                         <h3 className="text-2xl font-semibold text-red-500 mb-4">The Engineer</h3>
                         <p className="text-gray-300 leading-relaxed mb-4">
                             I am a Computer Science undergraduate at MIT World Peace University with a focus on software development, data structures, and algorithms. I bridge the gap between engineering and art; while I build scalable web applications using React and Node.js, I also specialize in 3D web experiences using Three.js.
@@ -19,7 +19,7 @@ export default function About() {
                         </p>
                     </div>
 
-                    <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-red-500/50 transition-all duration-300">
+                    <div className="glass-card rounded-3xl p-8 hover:border-red-500/50 transition-all duration-300">
                         <h3 className="text-2xl font-semibold text-red-500 mb-4">Achievements</h3>
                         <ul className="space-y-4 text-gray-300">
                             <li className="flex items-start gap-3">

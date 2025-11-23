@@ -33,7 +33,7 @@ export default function Projects() {
     ];
 
     return (
-        <section className="relative min-h-screen bg-[#0a0a0a] py-20 px-4 flex items-center justify-center pt-32">
+        <section className="relative min-h-screen py-20 px-4 flex items-center justify-center pt-32">
             <div className="max-w-6xl mx-auto w-full">
                 <h2 className="text-5xl md:text-6xl font-bold text-white mb-16 text-center">
                     Featured <span className="text-red-500">Projects</span>
@@ -43,7 +43,7 @@ export default function Projects() {
                     {projects.map((project, idx) => (
                         <div
                             key={idx}
-                            className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:border-red-500/50 transition-all duration-300 group"
+                            className="glass-card rounded-3xl overflow-hidden hover:border-red-500/50 transition-all duration-300 group"
                         >
                             <div className="p-8">
                                 <div className="text-6xl mb-4">{project.image}</div>
