@@ -60,6 +60,8 @@ export default function Shutterbugs() {
             caption: "Hoop It Up",
             alt: "Shutterbugs Event 3"
         }
+
+        
     ];
 
     return (
